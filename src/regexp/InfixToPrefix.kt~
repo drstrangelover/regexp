@@ -1,0 +1,84 @@
+package regexp
+
+import java.util.*
+
+/**
+ * Created by pinwheel on 6/27/17.
+ */
+
+private val operators = setOf('|','.')
+private val parentheses = setOf(')','(')
+
+// a(b|c)*d >> a.(b|c).*d
+private fun explicitConcatination(regExp:String) : String {
+    var concatinated = ""
+    val length = regExp.length
+    for (i in 0..(length-1)) {
+        concatinated += regExp[i]
+        if (!operators.contains(regExp[i]) && (i != length - 1) && !setOf('(').contains(regExp[i])
+                && !setOf('|','.',')','*').contains(regExp[i+1]) ) {
+            concatinated += "."
+        }
+    }
+    return concatinated
+
+}
+
+private fun getPrecedence(ch: Char): Int {
+    when (ch) {
+        '|' -> return 1
+        '*' -> return 2
+        '.' -> return 3
+//        '+', '-' -> return 1
+//
+//        '*', '/' -> return 2
+//
+//        '^' -> return 3
+    }
+    return -1
+}
+
+
+
+private fun Char.isOperator(): Boolean {
+    return setOf('|','*','(',')','.').contains(this)
+}
+
+// A utility function to check if the given character is operand
+private fun Char.isOperand(): Boolean {
+    return this in 'a'..'z' || this in 'A'..'Z' || this in '0'..'9'
+}
+
+fun infixToPrefix(rawInfix: String): String? {
+    val infix = explicitConcatination(rawInfix)
+    val stack = Stack<Char>()
+    val postfix = StringBuffer(infix.length)
+
+    for (i in 0..infix.length - 1) {
+        val c = infix[i]
+        when {
+            c.isOperand() -> postfix.append(c)
+            c == '(' -> stack.push(c)
+            c == ')' -> {
+                while (!stack.isEmpty() && stack.peek() != '(') {
+                    postfix.append(stack.pop())
+                }
+                if (!stack.isEmpty() && stack.peek() != '(')
+                    return null
+                else if (!stack.isEmpty())
+                    stack.pop()
+            }
+            c == '*' -> postfix.append(c)
+            c.isOperator() -> {
+                if (!stack.isEmpty() && getPrecedence(c) <= getPrecedence(stack.peek())) {
+                    postfix.append(stack.pop())
+                }
+                stack.push(c)
+            }
+        }
+    }
+    while (!stack.isEmpty()) {
+        postfix.append(stack.pop())
+    }
+    return postfix.toString()
+}
