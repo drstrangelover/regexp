@@ -1,4 +1,4 @@
-package main.kotlin.regexp
+package regexp
 
 import java.util.*
 import kotlin.collections.ArrayList

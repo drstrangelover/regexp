@@ -1,5 +1,4 @@
-package main.kotlin.regexp
-
+package regexp
 
 
 abstract class Token(open val value : Char)

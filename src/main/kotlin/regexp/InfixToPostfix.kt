@@ -1,5 +1,8 @@
 package main.kotlin.regexp
 
+import regexp.OperandToken
+import regexp.OperatorToken
+import regexp.Token
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -55,8 +58,8 @@ internal fun explicitConcatination(regExp: ArrayList<Token>) : ArrayList<Token> 
     val length = regExp.size
     for (i in 0..(length-1)) {
         concatinated.add(regExp[i])
-        if ( !setOf('|','.','(').contains(regExp[i].value) && (i != length - 1)
-                && !setOf('|','.',')','*','+','?').contains(regExp[i+1].value) ) {
+        if (!(setOf('|','.','(').contains(regExp[i].value) && regExp[i] is OperatorToken )&& (i != length - 1)
+                && !(setOf('|','.',')','*','+','?').contains(regExp[i+1].value) && regExp[i+1] is OperatorToken )) {
             concatinated.add(OperatorToken('c'))
         }
     }
@@ -87,7 +90,7 @@ internal fun infixToPostfix(rawInfix: String): ArrayList<Token> {
     for (i in 0..infix.size - 1) {
         val c = infix[i]
         when(c) {
-            is OperandToken  -> postfix.add(c)
+            is OperandToken -> postfix.add(c)
             is OperatorToken -> {
                 when(c.value) {
                     '('       -> stack.push(c)

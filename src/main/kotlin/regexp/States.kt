@@ -1,4 +1,4 @@
-package main.kotlin.regexp
+package regexp
 
 
 internal interface  State {
