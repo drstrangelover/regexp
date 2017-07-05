@@ -6,6 +6,7 @@ import java.util.*
 internal class NFA(postfix: String) {
     var initialState: State
 
+
     init {
         var catenationState: CatenationState
         var splitState: SplitState
@@ -72,10 +73,10 @@ internal class NFA(postfix: String) {
         initialState = fragment.startState
     }
 
-    fun match(string: String): Boolean {
+    fun match(input: String): Boolean {
         var currentStates: MutableList<State> = LinkedList()
         initialState.addTo(currentStates)
-        for (c in string.toCharArray()) {
+        for (c in input.toCharArray()) {
             val nextStates = LinkedList<State>()
             for (s in currentStates) {
                 s.transaction(c, nextStates)

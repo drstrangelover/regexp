@@ -3,7 +3,7 @@ package regexp
 
 internal interface  State {
     fun addTo(states: MutableList<State>)
-    fun transaction(char: Char, states: MutableList<State>)
+    fun transaction(inputChar: Char, states: MutableList<State>)
     fun setNextState(state: State)
 }
 
@@ -17,14 +17,14 @@ internal class AcceptableState : State {
         states.add(this)
     }
 
-    override fun transaction(char: Char, states: MutableList<State>) {}
+    override fun transaction(inputChar: Char, states: MutableList<State>) {}
     override fun setNextState(state: State) {}
 }
 
 
 
 
-internal class CatenationState(var inputChar: Char ) : State {
+internal class CatenationState(var regexChar: Char ) : State {
     lateinit var nextState1: State
 
 
@@ -32,8 +32,8 @@ internal class CatenationState(var inputChar: Char ) : State {
         states.add(this)
     }
 
-    override fun transaction(char: Char, states: MutableList<State>) {
-        if (inputChar == char) {
+    override fun transaction(inputChar: Char, states: MutableList<State>) {
+        if (regexChar == inputChar) { // regexChar is textToken && regexChar.value == textToken.value
             nextState1.addTo(states)
         }
     }
@@ -56,7 +56,7 @@ internal class SplitState : State {
         nextState2.addTo(states)
     }
 
-    override fun transaction(char: Char, states: MutableList<State>) {
+    override fun transaction(inputChar: Char, states: MutableList<State>) {
         throw IllegalArgumentException("Illegal regExp")
     }
 
