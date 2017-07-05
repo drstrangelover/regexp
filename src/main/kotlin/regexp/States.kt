@@ -1,4 +1,4 @@
-package regexp
+package main.kotlin.regexp
 
 
 internal interface  State {
@@ -33,7 +33,7 @@ internal class CatenationState(var regexChar: Char ) : State {
     }
 
     override fun transaction(inputChar: Char, states: MutableList<State>) {
-        if (regexChar == inputChar) { // regexChar is textToken && regexChar.value == textToken.value
+        if (regexChar == inputChar) {
             nextState1.addTo(states)
         }
     }

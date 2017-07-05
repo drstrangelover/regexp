@@ -1,17 +1,18 @@
-package regexp
+package main.kotlin.regexp
 
 fun regexpMatch(input: String, regexp: String): Boolean {
-    return NFA(infixToPrefix("[>-z]*$regexp[>-z]*")).match(input)
+    return NFA(infixToPostfix("[>z]*$regexp[>z]*")).match(input)
 }
 
 fun main(args: Array<String>) {
     fun test(string : String, regexp : String) {
-        println("$string  >>>>  $regexp  = ${NFA(infixToPrefix(regexp)).match(string)}")
+        println("$string  >>>>  $regexp  = ${NFA(infixToPostfix(regexp)).match(string)}")
     }
 
  //   test("@b/&&","[>-z]+/*&+p?m*")
    // println(match("abcde","bcv?p*de+"))
-    println("abcde".regexp("bcv?p*de+"))
+   println("ab?cde".regexp("ab\\?cde"))
+  //  println(NFA(infixToPostfix("as[az]as")).match("\\?asdfasfd"))
 }
 
 
