@@ -20,7 +20,7 @@ fun String.regexp(regexp: String) : String {
         return this.drop(j-1).dropLast(this.length - 1 -i)
 
     }
-    return "asdf"
+    return ""
 }
 
 
