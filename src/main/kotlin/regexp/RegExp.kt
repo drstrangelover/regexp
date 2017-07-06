@@ -20,7 +20,7 @@ fun String.regexp(regexp: String) : String {
         return this.drop(j-1).dropLast(this.length - 1 -i)
 
     }
-    return ""
+    return "asdf"
 }
 
 
@@ -32,3 +32,4 @@ class RegExp(var input: String, var regexp: String) {
     fun findFirst(): String {
         return this.input.regexp(this.regexp)
     }
+}
