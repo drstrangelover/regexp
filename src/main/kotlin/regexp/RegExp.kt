@@ -32,4 +32,3 @@ class RegExp(var input: String, var regexp: String) {
     fun findFirst(): String {
         return this.input.regexp(this.regexp)
     }
-}

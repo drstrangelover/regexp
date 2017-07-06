@@ -8,10 +8,6 @@ internal interface  State {
 }
 
 
-
-
-
-
 internal class AcceptableState : State {
     override fun addTo(states: MutableList<State>) {
         states.add(this)

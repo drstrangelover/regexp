@@ -62,10 +62,10 @@ internal fun explicitConcatination(regExp: ArrayList<Token>) : ArrayList<Token> 
     val length = regExp.size
     for (i in 0..(length-1)) {
         concatinated.add(regExp[i])
-        if (!(setOf('|','.','(').contains(regExp[i].value)
+        if (!(setOf('|','(').contains(regExp[i].value)
                 && regExp[i] is OperatorToken )
                 && (i != length - 1)
-                && !(setOf('|','.',')','*','+','?').contains(regExp[i+1].value)
+                && !(setOf('|',')','*','+','?').contains(regExp[i+1].value)
                 && regExp[i+1] is OperatorToken )) {
             concatinated.add(OperatorToken('c'))
         }
@@ -81,7 +81,6 @@ internal fun getPrecedence(ch: Char): Int {
         '*' -> return 2
         '+' -> return 2
         'c' -> return 3
-        '.' -> return 3
     }
     return -1
 }
@@ -108,7 +107,6 @@ internal fun infixToPostfix(rawInfix: String): ArrayList<Token> {
                         if (!stack.isEmpty())
                             stack.pop()
                     }
-                    '.'       -> postfix.add(c)
                     '?'       -> postfix.add(c)
                     '*'       -> postfix.add(c)
                     '+'       -> postfix.add(c)
