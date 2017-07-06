@@ -20,7 +20,6 @@ internal class NFA(postfix: ArrayList<Token>) {
             when (token) {
                 is OperatorToken -> {
                     when(token.value) {
-                        '.' -> { stack.pop()}
                         '?' -> {
                             fragment = stack.pop()
                             splitState = SplitState()
@@ -69,7 +68,7 @@ internal class NFA(postfix: ArrayList<Token>) {
                 }
 
                 is OperandToken -> {
-                    catenationState = CatenationState(token.value)
+                    catenationState = CatenationState(token)
                     finalStates = LinkedList<State>()
                     finalStates.add(catenationState)
                     stack.push(Fragment(catenationState, finalStates))

@@ -6,11 +6,6 @@ fun regexpMatch(input: String, regexp: String): Boolean {
     return NFA(infixToPostfix("[>z]*$regexp[>z]*")).match(input)
 }
 
-fun main(args: Array<String>) {
-
-}
-
-
 
 fun String.regexp(regexp: String) : String {
     if (regexpMatch(this, regexp)) {
@@ -34,7 +29,7 @@ class RegExp(var input: String, var regexp: String) {
     fun match(): Boolean {
         return regexpMatch(this.input, this.regexp)
     }
-    fun find(): String {
+    fun findFirst(): String {
         return this.input.regexp(this.regexp)
     }
 }

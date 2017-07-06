@@ -1,5 +1,6 @@
 package main.kotlin.regexp
 
+import regexp.AnyOperandToken
 import regexp.OperandToken
 import regexp.OperatorToken
 import regexp.Token
@@ -16,7 +17,10 @@ internal fun tokenize(input: String) : ArrayList<Token> {
         else if (index != 0 && input[index-1] == '\\' ) {
             regex.add(OperandToken(char))
         } else if (char in operators) {
-            regex.add(OperatorToken(char))
+            when(char) {
+                '.'  ->  regex.add(AnyOperandToken(char))
+                else ->  regex.add(OperatorToken(char))
+            }
         } else {
             regex.add(OperandToken(char))
         }
@@ -58,8 +62,11 @@ internal fun explicitConcatination(regExp: ArrayList<Token>) : ArrayList<Token> 
     val length = regExp.size
     for (i in 0..(length-1)) {
         concatinated.add(regExp[i])
-        if (!(setOf('|','.','(').contains(regExp[i].value) && regExp[i] is OperatorToken )&& (i != length - 1)
-                && !(setOf('|','.',')','*','+','?').contains(regExp[i+1].value) && regExp[i+1] is OperatorToken )) {
+        if (!(setOf('|','.','(').contains(regExp[i].value)
+                && regExp[i] is OperatorToken )
+                && (i != length - 1)
+                && !(setOf('|','.',')','*','+','?').contains(regExp[i+1].value)
+                && regExp[i+1] is OperatorToken )) {
             concatinated.add(OperatorToken('c'))
         }
     }

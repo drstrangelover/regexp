@@ -24,7 +24,7 @@ internal class AcceptableState : State {
 
 
 
-internal class CatenationState(var regexChar: Char ) : State {
+internal class CatenationState(var regexToken: Token ) : State {
     lateinit var nextState1: State
 
 
@@ -33,16 +33,16 @@ internal class CatenationState(var regexChar: Char ) : State {
     }
 
     override fun transaction(inputChar: Char, states: MutableList<State>) {
-        if (regexChar == inputChar) {
+        if (regexToken is AnyOperandToken  || regexToken.value == inputChar ) {
             nextState1.addTo(states)
         }
+
     }
 
     override fun setNextState(state: State) {
         nextState1 = state
     }
 }
-
 
 
 
