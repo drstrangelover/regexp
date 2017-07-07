@@ -8,7 +8,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-val operators = setOf('+','|','*','(',')','.',']','[','?')
+val operators = setOf('+','|','*','(',')','[',']','?')
 
 internal fun tokenize(input: String) : ArrayList<Token> {
     val regex = arrayListOf<Token>()
@@ -17,10 +17,9 @@ internal fun tokenize(input: String) : ArrayList<Token> {
         else if (index != 0 && input[index-1] == '\\' ) {
             regex.add(OperandToken(char))
         } else if (char in operators) {
-            when(char) {
-                '.'  ->  regex.add(AnyOperandToken(char))
-                else ->  regex.add(OperatorToken(char))
-            }
+            regex.add(OperatorToken(char))
+        } else if(char == '.') {
+            regex.add(AnyOperandToken(char))
         } else {
             regex.add(OperandToken(char))
         }
