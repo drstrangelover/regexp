@@ -26,18 +26,3 @@ fun String.findFirst(regexp: String) : String {
     }
     return ""
 }
-
-
-
-class RegExp(var input: String, var regexp: String) {
-    fun match() : Boolean {
-        return this.input.match(this.regexp)
-    }
-
-    fun matchInside(): Boolean {
-        return matchInside(this.input, this.regexp)
-    }
-    fun findFirst(): String {
-        return this.input.findFirst(this.regexp)
-    }
-}

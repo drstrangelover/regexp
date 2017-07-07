@@ -1,9 +1,6 @@
 package main.kotlin.regexp
 
-import regexp.AnyOperandToken
-import regexp.OperandToken
-import regexp.OperatorToken
-import regexp.Token
+import regexp.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -13,9 +10,15 @@ val operators = setOf('+','|','*','(',')','[',']','?')
 internal fun tokenize(input: String) : ArrayList<Token> {
     val regex = arrayListOf<Token>()
     for ((index,char) in input.withIndex()) {
-        if (char == '\\') {}
+        if (char == '\\' || char == '^') {}
         else if (index != 0 && input[index-1] == '\\' ) {
             regex.add(OperandToken(char))
+        } else if (index != 0  && input[index-1] == '^') {
+            if (index == 1 ) {
+                regex.add(ExceptOperandToken(char))
+            } else if (input[index-2] != '\\') {
+                regex.add(ExceptOperandToken(char))
+            }
         } else if (char in operators) {
             regex.add(OperatorToken(char))
         } else if(char == '.') {

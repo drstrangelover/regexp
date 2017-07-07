@@ -29,7 +29,9 @@ internal class CatenationState(var regexToken: Token ) : State {
     }
 
     override fun transaction(inputChar: Char, states: MutableList<State>) {
-        if (regexToken is AnyOperandToken  || regexToken.value == inputChar ) {
+        if ((regexToken is ExceptOperandToken && regexToken.value != inputChar)
+               || regexToken is AnyOperandToken
+                || (regexToken.value == inputChar && regexToken !is ExceptOperandToken)) {
             nextState1.addTo(states)
         }
 
@@ -53,7 +55,7 @@ internal class SplitState : State {
     }
 
     override fun transaction(inputChar: Char, states: MutableList<State>) {
-        throw IllegalArgumentException("Illegal regExp")
+        throw IllegalArgumentException("Illegal regExp") as Throwable
     }
 
     override fun setNextState(state: State) {
