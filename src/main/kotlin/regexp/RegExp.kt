@@ -26,3 +26,21 @@ fun String.findFirst(regexp: String) : String {
     }
     return ""
 }
+
+fun String.findLast(regexp: String) : String {
+    if (matchInside(this, regexp)) {
+        var i = 1
+        while (matchInside(this.drop(i), regexp)) {
+            i++
+        }
+        i--
+        var j = 0
+        while (!(this.drop(i).dropLast(j).match(regexp))) {
+            j++
+        }
+
+        return this.drop(i).dropLast(j)
+
+    }
+    return ""
+}

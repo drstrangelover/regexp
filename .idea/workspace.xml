@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bf9f82d-4957-416b-9739-b20ea6f9ecd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/regexp/States.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/regexp/States.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/regexp/Tokens.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/regexp/Tokens.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -17,6 +13,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/regexp$InfixToPostfixTests_exceptTest.coverage" NAME="InfixToPostfixTests.exceptTest Coverage Results" MODIFIED="1499449168773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.kotlin.regexp.*</FILTER>
+    </SUITE>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
@@ -36,8 +37,8 @@
       <file leaf-file-name="InfixToPostfixTests.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="230">
+              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -46,11 +47,9 @@
       <file leaf-file-name="NFA.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/NFA.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-              <folding>
-                <element signature="e#16#70#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1615">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,8 +57,8 @@
       <file leaf-file-name="RegExp.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="398">
+              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -90,8 +89,8 @@
       <file leaf-file-name="States.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/States.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="578">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +99,7 @@
       <file leaf-file-name="InfixToPostfix.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="432">
               <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="e#28#98#0" expanded="true" />
@@ -471,9 +470,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/kotlin/regexp/NFA.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/regexp/Tokens.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/regexp/States.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt" />
       </list>
     </option>
@@ -1102,47 +1101,48 @@
       <workItem from="1499331166726" duration="3019000" />
       <workItem from="1499334800617" duration="712000" />
       <workItem from="1499387424364" duration="696000" />
-      <workItem from="1499420987611" duration="4977000" />
+      <workItem from="1499420987611" duration="17215000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 48m 57s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 41m 14s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 49m 08s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 42m 23s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 56m 37s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 42m 54s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 56m 41s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 43m 06s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 57m 41s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 43m 17s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 57m 49s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 43m 39s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 14h 59m 13s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 43m 54s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 15h 02m 03s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 45m 12s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 15h 04m 26s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 45m 32s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 15h 08m 59s.xml">
+    <history-entry file="InfixToPostfixTests_exceptTest - 2017.07.07 at 20h 45m 41s.xml">
       <configuration name="InfixToPostfixTests.exceptTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18776000" />
+    <option name="totallyTimeSpent" value="31014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="31" width="1932" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1163,8 +1163,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2630458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1187,31 +1188,49 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/NFA.kt</url>
-          <line>92</line>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/States.kt</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="56" />
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt</url>
-          <line>129</line>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="57" />
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/States.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt</url>
           <line>31</line>
           <properties />
-          <option name="timeStamp" value="58" />
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="96" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1232,9 +1251,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,9 +1327,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,9 +1393,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1488,9 +1501,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,9 +1559,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,6 +1589,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/NFA.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/Tokens.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1588,19 +1605,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/NFA.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/InfixToPostfix.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="432">
           <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="e#28#98#0" expanded="true" />
@@ -1610,24 +1617,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/States.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/regexp/InfixToPostfixTests.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="230">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/regexp/RegExp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="398">
+          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding />
         </state>
       </provider>
