@@ -5,6 +5,7 @@ import org.junit.Test
 import regexp.findFirst
 import regexp.findLast
 import regexp.match
+import regexp.patternSplit
 import kotlin.test.assertEquals
 
 
@@ -31,5 +32,10 @@ class InfixToPostfixTests() {
         assertEquals(false,"b".match("^b"))
         //assertEquals("hello","hi hello = goodbye".findFirst(".*^lhello.*"))
         assertEquals("sum","= sum".findLast("= *^ +").drop(1).dropWhile { it == ' ' })
+    }
+
+    @Test
+    fun splitTest() {
+        assertEquals(listOf("foo","bar","car"),"foo   bar             car".patternSplit(" +"))
     }
 }

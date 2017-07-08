@@ -2,8 +2,8 @@ package regexp
 
 import main.kotlin.regexp.infixToPostfix
 
-fun matchInside(input: String, regexp: String): Boolean {
-    return NFA(infixToPostfix(".*$regexp.*")).match(input)
+fun String.matchInside(regexp: String): Boolean {
+    return NFA(infixToPostfix(".*$regexp.*")).match(this)
 }
 
 fun String.match(regexp: String) : Boolean {
@@ -12,13 +12,13 @@ fun String.match(regexp: String) : Boolean {
 
 
 fun String.findFirst(regexp: String) : String {
-    if (matchInside(this, regexp)) {
+    if (this.matchInside(regexp)) {
         var i = 0
-        while (!matchInside(this.dropLast(this.length - 1 - i), regexp)) {
+        while (!this.dropLast(this.length - 1 - i).matchInside( regexp)) {
             i++
         }
         var j = 0
-        while (matchInside(this.drop(j).dropLast(this.length - 1 - i), regexp)) {
+        while (this.drop(j).dropLast(this.length - 1 - i).matchInside( regexp)) {
             j++
         }
         return this.drop(j-1).dropLast(this.length - 1 -i)
@@ -28,9 +28,9 @@ fun String.findFirst(regexp: String) : String {
 }
 
 fun String.findLast(regexp: String) : String {
-    if (matchInside(this, regexp)) {
+    if (this.matchInside(regexp)) {
         var i = 1
-        while (matchInside(this.drop(i), regexp)) {
+        while (this.drop(i).matchInside(regexp)) {
             i++
         }
         i--
@@ -43,4 +43,29 @@ fun String.findLast(regexp: String) : String {
 
     }
     return ""
+}
+
+
+
+fun String.patternSplit(regexp: String) : List<String> {
+    val splitted = mutableListOf<String>()
+    var temp = this
+    while (temp.matchInside(regexp)) {
+        var i = 0
+        while (!temp.dropLast(temp.length - i).match(".*$regexp")) {
+            i++
+        }
+        if (temp.dropLast(temp.length  -i).match(regexp)) {
+
+                temp = temp.drop(i)
+
+        } else {
+            splitted.add(temp.dropLast(temp.length - i + 1))
+            temp = temp.drop(i)
+        }
+    }
+    splitted.add(temp)
+    return splitted
+
+
 }
