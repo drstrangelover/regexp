@@ -46,7 +46,6 @@ fun String.findLast(regexp: String) : String {
 }
 
 
-
 fun String.patternSplit(regexp: String) : List<String> {
     val splitted = mutableListOf<String>()
     var temp = this

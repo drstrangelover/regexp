@@ -37,5 +37,14 @@ class InfixToPostfixTests() {
     @Test
     fun splitTest() {
         assertEquals(listOf("foo","bar","car"),"foo   bar             car".patternSplit(" +"))
+        assertEquals(listOf("foo","' bar'"),"foo  ' bar'".patternSplit("('.*)'"))
     }
+
+    @Test
+    fun rangeTest() {
+        assertEquals(true,"92".match("[09]+"))
+    }
+
+
+
 }
