@@ -11,6 +11,7 @@ Implementation of Thompson NFA
  5. '[09]' '[aZ]' '[0z]' ... any symbol in range 
  6. '(a)' 
  7. 'abc' sequence of symbols
+ 8. '.' any symbol
  
 # Api
 
